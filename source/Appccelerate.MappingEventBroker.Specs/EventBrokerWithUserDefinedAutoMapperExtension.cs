@@ -1,6 +1,6 @@
 //-------------------------------------------------------------------------------
 // <copyright file="EventBrokerWithUserDefinedAutoMapperExtension.cs" company="Appccelerate">
-//   Copyright (c) 2008-2013
+//   Copyright (c) 2008-2014
 //
 //   Licensed under the Apache License, Version 2.0 (the "License");
 //   you may not use this file except in compliance with the License.
@@ -73,7 +73,7 @@ namespace Appccelerate.MappingEventBroker
     }
 
     [Subject(Concern.MappingWithUserDefinedConvention)]
-    public class when_publishing_topic_which_matches_user_defined_convention_with_defined_mapping : EventBrokerWithUserDefinedAutoMapperExtension
+    public class When_publishing_topic_which_matches_user_defined_convention_with_defined_mapping : EventBrokerWithUserDefinedAutoMapperExtension
     {
         protected static string sourceEventDescription = "Source";
 
@@ -89,11 +89,13 @@ namespace Appccelerate.MappingEventBroker
             source.Publish(sourceEventDescription);
         };
 
+        // ReSharper disable once UnusedField.Compiler
+        // ReSharper disable once InconsistentNaming
         Behaves_like<MappedEventFiredBehavior> event_argument_auto_mapper;
     }
 
     [Subject(Concern.MappingWithUserDefinedConvention)]
-    public class when_publishing_topic_which_matches_user_defined_convention_with_defined_mapping_but_without_subscriber : EventBrokerWithDefaultAutoMapperExtension
+    public class When_publishing_topic_which_matches_user_defined_convention_with_defined_mapping_but_without_subscriber : EventBrokerWithDefaultAutoMapperExtension
     {
         protected static bool wasCalled;
 
@@ -113,6 +115,8 @@ namespace Appccelerate.MappingEventBroker
             source.Publish(sourceEventDescription);
         };
 
+        // ReSharper disable once UnusedField.Compiler
+        // ReSharper disable once InconsistentNaming
         Behaves_like<MappedEventNotFiredBehavior> not_an_event_argument_auto_mapper;
     }
 }

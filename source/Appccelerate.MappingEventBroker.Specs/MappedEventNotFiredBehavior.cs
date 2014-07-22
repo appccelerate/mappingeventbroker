@@ -1,6 +1,6 @@
 //-------------------------------------------------------------------------------
 // <copyright file="MappedEventNotFiredBehavior.cs" company="Appccelerate">
-//   Copyright (c) 2008-2013
+//   Copyright (c) 2008-2014
 //
 //   Licensed under the Apache License, Version 2.0 (the "License");
 //   you may not use this file except in compliance with the License.
@@ -29,14 +29,10 @@ namespace Appccelerate.MappingEventBroker
 
         protected static bool wasCalled;
 
-        It should_fire_source = () =>
-        {
-            destination.SubscriptionEventArgs.ShouldNotBeNull();
-        };
+        It should_fire_source = () => 
+            destination.SubscriptionEventArgs.Should().NotBeNull();
 
-        It should_indicate_missing_mapping = () =>
-            {
-                wasCalled.Should().BeTrue();
-            };
+        It should_indicate_missing_mapping = () => 
+            wasCalled.Should().BeTrue();
     }
 }

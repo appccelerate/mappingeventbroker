@@ -1,6 +1,6 @@
 //-------------------------------------------------------------------------------
 // <copyright file="MappedEventFiredBehavior.cs" company="Appccelerate">
-//   Copyright (c) 2008-2013
+//   Copyright (c) 2008-2014
 //
 //   Licensed under the Apache License, Version 2.0 (the "License");
 //   you may not use this file except in compliance with the License.
@@ -18,6 +18,8 @@
 
 namespace Appccelerate.MappingEventBroker
 {
+    using FluentAssertions;
+
     using Machine.Specifications;
 
     [Behaviors]
@@ -31,17 +33,17 @@ namespace Appccelerate.MappingEventBroker
 
         It should_convert_from_source_to_destination = () =>
         {
-            destination.MappedSubscriptionEventArgs.Destination.ShouldEqual(sourceEventDescription);
+            destination.MappedSubscriptionEventArgs.Destination.Should().Be(sourceEventDescription);
         };
 
         It should_fire_source = () =>
         {
-            destination.SubscriptionEventArgs.ShouldNotBeNull();
+            destination.SubscriptionEventArgs.Should().NotBeNull();
         };
 
         It should_fire_destination = () =>
         {
-            destination.MappedSubscriptionEventArgs.ShouldNotBeNull();
+            destination.MappedSubscriptionEventArgs.Should().NotBeNull();
         };
     }
 }
