@@ -1,13 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D7869A8-7F47-44ED-BAAD-30EDBA31C8D2}"
-	ProjectSection(SolutionItems) = preProject
-		appccelerate.mappingeventbroker.nuspec = appccelerate.mappingeventbroker.nuspec
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appccelerate.MappingEventBroker", "Appccelerate.MappingEventBroker\Appccelerate.MappingEventBroker.csproj", "{B5815C62-C03A-4E1A-9CCA-3A460D17C202}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appccelerate.MappingEventBroker.Specs", "Appccelerate.MappingEventBroker.Specs\Appccelerate.MappingEventBroker.Specs.csproj", "{C4251E26-D4F5-41E5-89FA-FA9995F3BA21}"
