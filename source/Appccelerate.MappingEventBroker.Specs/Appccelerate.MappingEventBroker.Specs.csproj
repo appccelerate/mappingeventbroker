@@ -32,9 +32,9 @@
     <NoWarn>169</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Appccelerate.EventBroker, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Appccelerate.EventBroker, Version=3.6.0.0, Culture=neutral, PublicKeyToken=917bca444d1f2b4c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Appccelerate.EventBroker.3.5.0\lib\net45\Appccelerate.EventBroker.dll</HintPath>
+      <HintPath>..\packages\Appccelerate.EventBroker.3.6.0\lib\net45\Appccelerate.EventBroker.dll</HintPath>
     </Reference>
     <Reference Include="Appccelerate.Fundamentals, Version=2.5.0.0, Culture=neutral, PublicKeyToken=917bca444d1f2b4c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
